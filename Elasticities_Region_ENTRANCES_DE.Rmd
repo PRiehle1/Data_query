@@ -1,0 +1,376 @@
+---
+title: "Elasticities between Regions"
+author: "Phillip Riehle"
+date: "1 9 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Preface 
+
+In this part we load and install if necessary all neded packages to run the file
+
+```{r Preface, message=FALSE, warning=FALSE, paged.print=FALSE}
+
+rm(list = ls())
+
+libraries = c("openxlsx", "data.table", "dplyr", "ggplot2", "reshape", "officer", "magrittr", "flextable", "readxl", "tidyr", "stringr", "keyring", "knitr", "eurostat", "tidyverse","rvest","Rcpp","jtools","magrittr","utils","ggpubr")
+
+lapply(libraries, function(x) if (!(x %in% installed.packages())) {
+  install.packages(x)
+})
+lapply(libraries, library, quietly = TRUE, character.only = TRUE)
+
+```
+
+# Data Download
+
+Since the data we need for our regression analysis is only available via a .xlsx file publicly available on the web we need to download the file. This part of the file seeks to do so. 
+
+```{r Data Download}
+# First we need to define the loaction of the data and the file in wich we want to safe it
+
+dwnl_data <- list() 
+dwnl_data$url[1] <- c("https://www.statistikportal.de/sites/default/files/2021-03/vgrdl_r1b1_bs2020.xlsx")
+
+# ATENTION: PLEASE CHANGE THE DATA LOCATION TO YOUR WORKING DIRECTORY
+
+dwnl_data$dest[1] <- c("C:/Users/phill/Dropbox/Student_Tom/ENTRANCES_Phillip/Elast_Regions_Energy/Data/VGR_DE.xlsx")
+
+# To avoid multiple downloads check if the file does already exists
+
+if (!file.exists(dwnl_data$dest[1])){
+  
+  download.file(dwnl_data$url[1], method = "auto",destfile  =dwnl_data$dest[1] , mode = "wb")
+  
+} else {
+  
+  print("The file does already exists and is not downloaded again")
+  
+}
+
+
+```
+
+# Data Transformation 
+
+This part reads the previously downloaded file and transforms and manipulate the data to fit to our regression analysis
+
+## Define Filters 
+
+In Order to more easyly  extract the data we initialize a filter list which will be used in the following extraction function
+
+```{r Data Transformation: Define Filters}
+
+# We define a filter list to extract the necessary data from the xlsx file
+
+var_filter <- list()
+
+# GVA_D_NUTS1
+var_filter$name[[1]]          <- c("GVA_D_NUTS1")
+var_filter$sheet_name[[1]]    <- c("2.3.1.3")
+var_filter$rows[[1]]          <- c(2,5:15)
+var_filter$columns[[1]]       <- c(1:18) 
+
+# GVA_B_NUTS1
+var_filter$name[[2]]          <- c("GVA_B_NUTS1")
+var_filter$sheet_name[[2]]    <- c("2.3.1.1")
+var_filter$rows[[2]]          <- c(2,5:15)
+var_filter$columns[[2]]       <- c(1:18) 
+
+# GVA_TOTAL_NUTS1
+var_filter$name[[3]]          <- c("GVA_TOTAL_NUTS1")
+var_filter$sheet_name[[3]]    <- c("2.1")
+var_filter$rows[[3]]          <- c(2,5:34)
+var_filter$columns[[3]]       <- c(1:18) 
+
+# GVA_D_r_Index_NUTS1
+var_filter$name[[4]]          <- c("GVA_D_r_Index_NUTS1")
+var_filter$sheet_name[[4]]    <- c("7.3.1.3")
+var_filter$rows[[4]]          <- c(2,16:26)
+var_filter$columns[[4]]       <- c(1:18) 
+
+# GVA_B_r_Index_NUTS1
+var_filter$name[[5]]          <- c("GVA_B_r_Index_NUTS1")
+var_filter$sheet_name[[5]]    <- c("7.3.1.1")
+var_filter$rows[[5]]          <- c(2,16:26)
+var_filter$columns[[5]]       <- c(1:18) 
+
+# GVA_TOTAL_r_Index_NUTS1
+var_filter$name[[6]]          <- c("GVA_TOTAL_r_Index_NUTS1")
+var_filter$sheet_name[[6]]    <- c("7.3")
+var_filter$rows[[6]]          <- c(2,36:64)
+var_filter$columns[[6]]       <- c(1:18) 
+
+```
+
+## Data Extraction 
+
+Here we extract the data 
+
+```{r Data Transformation: Data Extraction, message=FALSE, warning=FALSE, echo = TRUE}
+
+# Define a variable list
+
+var_list <- list() # empty list
+
+for (iVar in 1:length(var_filter$name)){
+  
+  temp              <- read_excel(dwnl_data$dest[1], sheet = var_filter$sheet_name[[iVar]]) 
+  temp              <- temp[var_filter$rows[[iVar]],var_filter$columns[[iVar]]]
+  names(temp)       <- as.character(temp[1,])
+  temp              <- temp[-1,] %>% as.data.frame()
+  
+  var_list[[as.character(var_filter$name[iVar])]]             <- data.frame(t(temp[-1]))
+  colnames(var_list[[as.character(var_filter$name[iVar])]])   <- temp[, 1]
+  
+  var_list[[as.character(var_filter$name[iVar])]]             <- tibble::rownames_to_column(var_list[[as.character(var_filter$name[iVar])]] , "NUTS1")
+  
+}
+```
+## Data to one dataframe: 
+
+```{r Data Transformation: Data Frame}
+
+data_trans <- function(data_fram) {
+
+  df_temp <- data.frame()
+  
+  for (iReg in 1:nrow(data_fram)){
+  
+    temp <- data.frame(t(data_fram[iReg,]))
+    df <- data.frame()
+    for (icount in 1:nrow(temp)){
+  
+      df[icount,1] <- as.character(temp[1,1])
+      df[icount,2] <- row.names(temp)[icount]
+      df[icount,3] <- temp[icount,1]
+      df_b <- df[-1,]
+      }
+    df_temp <- rbind(df_temp,df_b)
+  }
+  return(df_temp)
+}
+
+df_list <- list()
+
+for (ivar in 1:length(var_list)){
+  
+  df_list[[paste("df",names(var_list[ivar]),sep = "_")]] <- data_trans(var_list[[ivar]])
+  colnames(df_list[[paste("df",names(var_list[ivar]),sep = "_")]]) <- c("NUTS1", "Year", var_filter$name[ivar])
+}
+```
+
+## Merge the dataframes
+
+```{r Data Transformation: Merge, message=FALSE, warning=FALSE}
+
+df_final <- Reduce(function(...) merge(..., by= c("NUTS1", "Year"), all.x=TRUE), df_list)
+
+# convert the data to numeric
+
+df_final[, c(3:8)] <- as.numeric(unlist(df_final[, c(3:8)]))
+
+show(kable(head(df_final)))
+```
+## Data Calculations:
+
+Here we calculate the Index of the GVA in nominal terms. Furthermore we calculate the price index for both sectors 
+
+```{r Data Transformation: Data Calculations (Price Index)}
+
+# GVA Index nominal terms
+
+for (iNUTS in 1:length(df_final$GVA_D_NUTS1)){
+  
+  df_final$GVA_D_Index[iNUTS]       <- df_final$GVA_D_NUTS1[iNUTS]/ df_final$GVA_D_NUTS1[df_final$Year == c("2015") & df_final$NUTS1 == df_final$NUTS1[iNUTS]]
+  
+  df_final$GVA_B_Index[iNUTS]       <- df_final$GVA_B_NUTS1[iNUTS]/ df_final$GVA_B_NUTS1[df_final$Year == c("2015") & df_final$NUTS1 == df_final$NUTS1[iNUTS]]
+  
+  df_final$GVA_D_r[iNUTS]               <- df_final$GVA_D_r_Index[iNUTS]/100 * df_final$GVA_D_NUTS1[df_final$Year == 2015 & df_final$NUTS1 == df_final$NUTS1[iNUTS]]
+  
+  df_final$GVA_TOTAL_r[iNUTS]           <- df_final$GVA_TOTAL_r_Index[iNUTS]/100 * df_final$GVA_TOTAL_NUTS1[df_final$Year == 2015 & df_final$NUTS1 == df_final$NUTS1[iNUTS]]
+
+}
+# NE Calculations
+
+df_final$GVA_NE_NUTS1       <- df_final$GVA_TOTAL_NUTS1 - df_final$GVA_D_NUTS1
+df_final$GVA_NE_r_NUTS1     <- df_final$GVA_TOTAL_r - df_final$GVA_D_r
+
+# GVA Price Index
+
+df_final$P_D_NUTS1      <- df_final$GVA_D_Index/(df_final$GVA_D_r_Index/100) 
+df_final$P_B_NUTS1      <- df_final$GVA_B_Index/(df_final$GVA_B_r_Index/100) 
+df_final$P_NE_NUTS1     <- df_final$GVA_NE_NUTS1/(df_final$GVA_NE_r_NUTS1)
+```
+
+Now we extract the data for the NUTS 0 Region and allocate it to the NUTS 1 Regions
+
+
+```{r Data Transformation: NUTS 0 Regions}
+
+# extract the data for the NUTS 0 Region
+
+df_NUTS0 <- df_final[c(56:66),] 
+
+# Delete the data from the data frame 
+df_final <- df_final[-c(56:66),]
+
+# Allocate the data to the data frame
+
+for (iNUTS in 1:length(df_final$NUTS1)){
+
+  df_final$GVA_D_NUTS0[iNUTS]         <- df_NUTS0$GVA_D_NUTS1[df_NUTS0$Year == df_final$Year[iNUTS]] 
+  df_final$GVA_B_NUTS0[iNUTS]         <- df_NUTS0$GVA_B_NUTS1[df_NUTS0$Year == df_final$Year[iNUTS]]
+  df_final$GVA_NE_NUTS0[iNUTS]        <- df_NUTS0$GVA_NE_NUTS1[df_NUTS0$Year == df_final$Year[iNUTS]]
+  df_final$GVA_TOTAL_NUTS0[iNUTS]     <- df_NUTS0$GVA_TOTAL_NUTS1[df_NUTS0$Year == df_final$Year[iNUTS]]
+  
+  df_final$P_D_NUTS0[iNUTS]           <- df_NUTS0$P_D_NUTS1[df_NUTS0$Year == df_final$Year[iNUTS]]
+  df_final$P_B_NUTS0[iNUTS]           <- df_NUTS0$P_B_NUTS1[df_NUTS0$Year == df_final$Year[iNUTS]]
+  df_final$P_NE_NUTS0[iNUTS]          <- df_NUTS0$P_NE_NUTS1[df_NUTS0$Year == df_final$Year[iNUTS]]
+  df_final$P_TOTAL_NUTS0[iNUTS]       <- df_NUTS0$P_TOTAL_NUTS1[df_NUTS0$Year == df_final$Year[iNUTS]]
+  
+  }
+
+```
+
+Now we calculate the growth rates
+
+```{r Data Transformation: Data Calculations (Growth rates)}
+
+# calculate the shares
+
+df_final$GVA_D_Share    <- df_final$GVA_D_NUTS1/df_final$GVA_D_NUTS0
+df_final$GVA_B_Share    <- df_final$GVA_B_NUTS1/df_final$GVA_B_NUTS0
+df_final$GVA_NE_Share   <- df_final$GVA_NE_NUTS1/df_final$GVA_NE_NUTS0
+
+# calculate the growth rates 
+for (iNUTS in 2:length(df_final$NUTS1)){
+  
+  temp_D    <- (df_final$GVA_D_Share[[iNUTS]]/ df_final$GVA_D_Share[[iNUTS-1]])-1
+  temp_B    <- (df_final$GVA_B_Share[[iNUTS]]/ df_final$GVA_B_Share[[iNUTS-1]])-1
+  temp_NE   <- (df_final$GVA_NE_Share[[iNUTS]]/ df_final$GVA_NE_Share[[iNUTS-1]])-1
+  
+  temp_pi_D_NUTS0     <- ((df_final$P_D_NUTS0[[iNUTS]]/(df_final$P_D_NUTS0[[iNUTS-1]])))-1
+  temp_pi_B_NUTS0     <- ((df_final$P_B_NUTS0[[iNUTS]]/(df_final$P_B_NUTS0[[iNUTS-1]])))-1
+  temp_pi_NE_NUTS0    <- ((df_final$P_NE_NUTS0[[iNUTS]]/(df_final$P_NE_NUTS0[[iNUTS-1]])))-1
+  
+  
+  temp_pi_D_NUTS1     <- ((df_final$P_D_NUTS1[[iNUTS]]/(df_final$P_D_NUTS1[[iNUTS-1]])))-1
+  temp_pi_B_NUTS1     <- (df_final$P_B_NUTS1[[iNUTS]]/(df_final$P_D_NUTS1[[iNUTS-1]]))-1
+  temp_pi_NE_NUTS1    <- (df_final$P_NE_NUTS1[[iNUTS]]/(df_final$P_NE_NUTS1[[iNUTS-1]]))-1
+  
+  
+  # Only calculate growth rates if we are in the same region
+  if (df_final$NUTS1[iNUTS] == df_final$NUTS1[iNUTS-1]){
+    df_final$gr_gva_D_share[iNUTS]    <- temp_D
+    df_final$gr_gva_B_share[iNUTS]    <- temp_B
+    df_final$gr_gva_NE_share[iNUTS]   <- temp_NE
+    
+    df_final$pi_D_NUTS0[iNUTS]    <- temp_pi_D_NUTS0
+    df_final$pi_B_NUTS0[iNUTS]    <- temp_pi_B_NUTS0
+    df_final$pi_NE_NUTS0[iNUTS]   <- temp_pi_NE_NUTS0
+    
+    
+    df_final$pi_D_NUTS1[iNUTS]    <- temp_pi_D_NUTS1
+    df_final$pi_B_NUTS1[iNUTS]    <- temp_pi_B_NUTS1
+    df_final$pi_NE_NUTS1[iNUTS]   <- temp_pi_NE_NUTS1
+    
+  }
+  else {
+    df_final$gr_gva_D_share[iNUTS] <- NA
+    df_final$gr_gva_B_share[iNUTS] <- NA
+    df_final$gr_gva_NE_share[iNUTS] <- NA
+  
+    df_final$pi_D_NUTS0[iNUTS]    <- NA
+    df_final$pi_B_NUTS0[iNUTS]    <- NA
+    df_final$pi_NE_NUTS0[iNUTS]   <- NA
+  
+    df_final$pi_B_NUTS1[iNUTS]    <- NA
+    df_final$pi_D_NUTS1[iNUTS]    <- NA
+    df_final$pi_NE_NUTS1[iNUTS]   <- NA
+  } 
+}
+```
+
+# Data Visualisation
+
+Here we visulize the previous generated dataset
+
+
+```{r Data Visualisation }
+
+NUTS1 <- unique(df_final$NUTS1)
+
+# Plot for Gross Value Added Shares for all Regions
+
+GVA_D_Share_Plot    <- list()
+GVA_B_Share_Plot    <- list()
+GVA_NE_Share_Plot   <- list()
+
+for (iReg in 1:length(NUTS1)){
+  
+  dfpart <- subset(df_final, NUTS1 == c(NUTS1[iReg]))
+  
+  GVA_D_Share_Plot[[iReg]] <- ggplot(dfpart, aes(x=as.integer(Year))) +
+    geom_line(aes(y=GVA_D_Share), color = "black") +
+      labs(title=paste(c("Gross Value Added Share Energy"), c(NUTS1[iReg])), 
+       caption="Source: DESTATIS", 
+       y="GVA D Share", x= "Year")
+  
+  GVA_B_Share_Plot[[iReg]] <- ggplot(dfpart, aes(x=as.integer(Year))) +
+    geom_line(aes(y=GVA_B_Share), color = "black") +
+      labs(title=paste(c("Gross Value Added Share Mining"), c(NUTS1[iReg])), 
+       caption="Source: DESTATIS", 
+       y="GVA B Share", x= "Year")
+  
+  GVA_NE_Share_Plot[[iReg]] <- ggplot(dfpart, aes(x=as.integer(Year))) +
+    geom_line(aes(y=GVA_NE_Share), color = "black") +
+      labs(title=paste(c("Gross Value Added Share Non Energy"), c(NUTS1[iReg])), 
+       caption="Source: DESTATIS", 
+       y="GVA NE Share", x= "Year")
+  
+  GVA_B_Share_Plot[[iReg]]
+    show(ggarrange(GVA_D_Share_Plot[[iReg]], GVA_NE_Share_Plot[[iReg]], ... =  GVA_B_Share_Plot[[iReg]], 
+          ncol = 1, nrow = 3))
+}
+```
+# Regression Part
+
+```{r Regression Part}
+reg <- list()
+
+# Elasticity Energy between Regions
+reg$reg_D     <- lm(data = df_final, gr_gva_D_share ~ pi_D_NUTS0 + pi_D_NUTS1)
+
+reg$reg_B     <- lm(data = df_final, gr_gva_B_share ~ pi_B_NUTS0 + pi_B_NUTS1)
+
+reg$reg_NE    <- lm(data = df_final, gr_gva_NE_share ~ pi_NE_NUTS0 + pi_NE_NUTS1)
+
+for (ireg in 1:length(reg)){
+  
+  show(summ(reg[[ireg]]))
+  plot(reg[[ireg]][["residuals"]])
+  abline(reg[ireg])
+}
+
+```
+
+## Parameter Calculation
+
+```{r Parameter Calculation}
+
+eta <- list()
+eta$D   <- 1 - reg$reg_D$coefficients[3]
+eta$B   <- 1 - reg$reg_B$coefficients[3]
+eta$NE  <- 1 - reg$reg_NE$coefficients[3]
+
+show(eta)
+
+
+
+```
+
