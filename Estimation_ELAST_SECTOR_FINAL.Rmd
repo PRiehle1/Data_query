@@ -1,0 +1,235 @@
+---
+title: "Estimation_Elast_Sectors"
+author: "Phillip Riehle"
+date: "26 8 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Preface
+
+In this part we load and install (if not already) the needed packages for this file
+
+```{r, warnings = FALSE, error = FALSE, message= FALSE, results = 'hide'}
+# Load necessary libraries
+rm(list = ls())
+libraries = c("eurostat","rvest", "knitr", "tidyverse", "Rcpp", "jtools", "ggplot2","ggpubr", "usefun","data.table", "dplyr","reshape", "officer", "magrittr", "flextable", "readxl", "tidyr", "stringr", "keyring")
+
+lapply(libraries, function(x) if (!(x %in% installed.packages())) {
+  install.packages(x)
+})
+lapply(libraries, library, quietly = TRUE, character.only = TRUE)
+
+## settings for ggplot2
+theme_set(theme_classic())
+```
+
+# Data Function Part
+
+Here we define the function to download the needed data set from EUROSTAT. Therefore we use the previous loadeded package “eurostat”
+
+```{r}
+generate_dataset_csec_elast <- function(country){
+  # In the first part we search for the right dataset on the EUROSTAT website
+  id    <- c("nama_10_a64")  
+  
+  # Now we download the full dataset for the defined id
+  dum   <- get_eurostat(id, time_format = "num")
+  
+  # Extract from the data set the information you want (by manual search)
+
+  df    <- subset(dum, unit %in% c("CP_MNAC", "PD15_NAC") & nace_r2 %in% c("TOTAL", "B", "D")& na_item == "B1G" & time %in% 1991:2019)
+  
+  # Create the data set for the country you are interested in
+  df    <- subset(df, geo== country)
+  
+  # Change the "design" of the data set to fit to the regression model 
+  df    <- df %>%
+    pivot_wider(names_from = c("nace_r2", "unit"), values_from = values) %>%
+    
+    rename(c("na_item" = "var", "geo" = "country" , "time" = "year","B_CP_MNAC" = "gva_b", "D_CP_MNAC" = "gva_d", "TOTAL_CP_MNAC" = "gva_total", "B_PD15_NAC" = "p_b", "D_PD15_NAC" = "p_d", "TOTAL_PD15_NAC" = "p_total")) 
+  
+  # rearrange columns
+  df    <- df[, c(2,3,6,4,5,9,7,8)] 
+  # change the order
+  df    <- df[order(df$year),]
+  
+  # Calculations
+  df$p_bd                   <- (unlist(df$p_b)+unlist(df$p_d))/2
+  df$gva_bd_share           <- (unlist(df$gva_b) + unlist(df$gva_d))/unlist(df$gva_total)
+  df$g_gva_bd_share         <- unlist(df$gva_bd_share)/unlist(lag(df$gva_bd_share),1) 
+  df$dp                     <- unlist(df$p_total)/unlist(lag(df$p_total),1)
+  df$dp_bd                  <- unlist(df$p_bd)/unlist(lag(df$p_bd),1)
+  
+  # Retrun the output
+  return(df)
+}
+```
+
+For the further analysis we define a set of countries here and generate the data set.
+
+*CHANGE COUNTRIES HERE*
+
+```{r}
+country_list    <- c("DE", "PL", "RO", "SK", "IT") # all coal countries in the ENTRANCES Project
+```
+
+Load the data set for the defined country list
+
+```{r, warnings = FALSE, error = FALSE, message= FALSE, results = 'hide'}
+# Generate the dataset
+df_final <- NULL
+for (i in 1:length(country_list)){
+  temp    <- generate_dataset_csec_elast(country_list[i])
+  df_final      <- rbind(df_final, temp)
+}
+```
+
+# Data Inspection and Visualisation {.tabset}
+
+
+## Inspection
+
+```{r}
+kable(head(df_final),"pipe")
+```
+
+## Plot (Real Gross Value Added)
+
+```{r}
+gva_total_plot      <- list()
+gva_b_plot          <- list()
+gva_d_plot          <- list()
+
+for (icountry in 1:length(country_list)){
+  dfpart <- subset(df_final, country == c(country_list[icountry]))
+  
+  gva_total_plot[[c(country_list[icountry])]] <- ggplot(dfpart, aes(x=year)) + 
+  geom_line(aes(y=gva_total/p_total), color = "red") + 
+  labs(title=paste(c("Real Gross Value Added"), c(country_list[icountry])), 
+       caption="Source: EUROSTAT", 
+       y="Real GVA ")
+
+  gva_b_plot[[c(country_list[icountry])]] <- ggplot(dfpart, aes(x=year)) + 
+  geom_line(aes(y=gva_b/p_b), color = "green") + 
+  labs(title=paste(c("Real Gross Value Added Mining Sector"), c(country_list[icountry])), 
+       caption="Source: EUROSTAT", 
+       y="Real GVA")
+
+  gva_d_plot[[c(country_list[icountry])]] <- ggplot(dfpart, aes(x=year)) + 
+  geom_line(aes(y=gva_d/p_d), color = "blue") + 
+  labs(title=paste(c("Real Gross Value Added Energy Sector"), c(country_list[icountry])), 
+       caption="Source: EUROSTAT", 
+       y="Real GVA")
+
+  show(ggarrange(gva_total_plot[[c(country_list[icountry])]], gva_b_plot[[c(country_list[icountry])]], ... =  gva_d_plot[[c(country_list[icountry])]], 
+          ncol = 1, nrow = 3))
+}
+```
+
+## Plot (Gross Value Added Share)
+
+```{r}
+gva_share_plot <- list()
+
+for (icountry in 1:length(country_list)){
+  dfpart <- subset(df_final, country == c(country_list[icountry]))
+  gva_share_plot[[c(country_list[icountry])]] <- ggplot(dfpart, aes(x = year)) +
+    geom_line(aes(y=gva_bd_share), color = "black") + 
+    labs(title=paste(c("Gross Value Added Share for Energy + Mining"), c(country_list[icountry])), 
+       caption="Source: EUROSTAT", 
+       y="GVA Share")
+  show(gva_share_plot[[icountry]])
+}  
+```
+
+# Regression Part {.tabset}
+
+We want to test the following equation: \(Y_{r,k,t} = \omega^{c}_k * (\frac{P_{r,k,t}}{P_{r,t}})^{\eta^{c}} * Y_{r,t}\)
+
+Now we do some basic rearranging
+
+\(\;Y_{r,k,t} = \omega^{c}_k * (\frac{P_{r,k,t}}{P_{r,t}})^{\eta^{c}} * Y_{r,t}\; |:Y_{r,t}\)
+
+\(\Leftrightarrow \frac{Y_{r,k,t}}{Y_{r,t}} = \omega^{c}_k * (\frac{P_{r,k,t}}{P_{r,t}})^{\eta^{c}} \;|*\frac{P_{r,k,t}}{P_{r,t}}\)
+
+\(\Leftrightarrow \frac{Y_{r,k,t}*P_{r,k,t}}{Y_{r,t}*P_{r,t}} = \omega^{c}_k * (\frac{P_{r,k,t}}{P_{r,t}})^{(1-\eta^{c})} \;|\frac{Y_{r,k,t}*P_{r,k,t}}{Y_{r,t}*P_{r,t}} = \Omega^{energy}_{t}\textrm{: gross value added share of energy}\)
+
+\(\Leftrightarrow\Omega^{energy}_{t} = \omega^{c}_k * (\frac{P_{r,k,t}}{P_{r,t}})^{(1-\eta^{c})} \;| : \Omega^{energy}_{t-1}\)
+
+\(\Leftrightarrow\frac{\Omega^{energy}_{t}}{\Omega^{energy}_{t-1}} = \frac{\omega^{c}_k}{\omega^{c}_k} * (\frac{(\frac{P_{r,k,t}}{P_{r,t}})}{(\frac{P_{r,k,t-1}}{P_{r,t-1}})})^{(1-\eta^{c})} \;| \textrm{rearrange}\)
+
+\(\Leftrightarrow\frac{\Omega^{energy}_{t}}{\Omega^{energy}_{t-1}} = [(\frac{P_{r,k,t}}{P_{r,k,t-1}})/(\frac{P_{r,t}}{P_{r,t-1}})]^{(1-\eta^{c})} \;|\textrm{log}\)
+
+\(\Leftrightarrow\log(\frac{\Omega^{energy}_{t}}{\Omega^{energy}_{t-1}}) = (1-\eta^{c}) \log[(\frac{P_{r,k,t}}{P_{r,k,t-1}})/(\frac{P_{r,t-1}}{P_{r,t}})]\;|\log(\frac{P_{r,k,t}}{P_{r,k,t-1}}) = \pi_{r,k,t},\: \log(\frac{P_{r,t}}{P_{r,t-1}})=\pi_{r,t}\)
+
+\(\Leftrightarrow\log(\frac{\Omega^{energy}_{t}}{\Omega^{energy}_{t-1}}) = (1-\eta^{c})(\pi_{r,k,t}-\pi_{r,t})\)
+
+
+## Create dummies
+
+```{r}
+for (icountry in 1:length(country_list)){
+  df_final[[(country_list[icountry])]]  <- NA    
+
+  for(row in 1:length(df_final$country)){
+  if (df_final$country[row] == country_list[icountry]) {df_final[(country_list[icountry])][row,] = as.numeric(1)} 
+  else {df_final[(country_list[icountry])][row,] = 0 }
+  }
+}  
+# convert logical expressions to numeric: 
+cols <- sapply(df_final, is.logical)
+df_final[,cols] <- lapply(df_final[,cols], as.numeric)
+kable(head(df_final[,14:18]))
+```
+
+## Model 1
+
+```{r}
+model1_list <- list()
+
+for (icountry in 1:length(country_list)){
+  
+  pi_r_k_t_minus_pi_r_t <- unlist(I(df_final[(country_list[icountry])]*(log(df_final$dp_bd)-log(df_final$dp))))
+  reg1                  <- lm(data = df_final,log(g_gva_bd_share) ~ -1 + pi_r_k_t_minus_pi_r_t)
+  
+  model1_list[[paste(c("model1"),c(country_list[icountry]), sep = "_")]] <- reg1 
+  cat(paste(c("Regression Results Model 1 for: "), c(country_list[icountry])))
+  print_empty_line(html.output = FALSE)
+  show(summ(reg1))
+  print_empty_line(html.output = FALSE)
+  print_empty_line(html.output = FALSE)
+
+}
+```
+
+## Model 2
+
+```{r}
+model2_list <- list()
+for (icountry in 1:length(country_list)){
+  # Model 2 
+  pi_r_k_t    <- unlist(I(df_final[(country_list[icountry])]*(log(df_final$dp_bd))))
+  pi_r_t      <- unlist(I(df_final[(country_list[icountry])]*log(df_final$dp)))
+  reg2        <- lm(data = df_final,log(g_gva_bd_share) ~ -1 + pi_r_k_t + pi_r_t  )
+  
+  model2_list[[paste(c("model2"),c(country_list[icountry]), sep = "_")]] <- reg2 
+  print(paste(c("Regression Results Model 2 for: "), c(country_list[icountry])))
+  show(summ(reg2))
+}
+```
+
+## Model Parameter \(\eta^{c}\)
+
+```{r}
+eta_c <- list()
+
+for (icountry in 1:length(country_list)){
+  eta_c[[paste(c("model1"),c(country_list[icountry]), sep = "_")]] <- (1 - as.numeric(unlist(model1_list[[icountry]][1])))
+  cat(paste("The Parameter eta_c for", country_list[icountry],"is", eta_c[icountry],sep =" "), sep = "\n\n")
+}
+```
+

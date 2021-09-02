@@ -1,0 +1,636 @@
+NUTS3;NUTS3_Name;NUTS2;NUTS2_Name;NUTS1;NUTS1_Name;NUTS0;Country
+DE111;Stuttgart, Stadtkreis;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE112;Böblingen;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE113;Esslingen;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE114;Göppingen;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE115;Ludwigsburg;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE116;Rems-Murr-Kreis;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE117;Heilbronn, Stadtkreis;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE118;Heilbronn, Landkreis;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE119;Hohenlohekreis;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE11A;Schwäbisch Hall;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE11B;Main-Tauber-Kreis;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE11C;Heidenheim;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE11D;Ostalbkreis;DE11;Stuttgart;DE1;Baden-Württemberg;DE;Germany
+DE121;Baden-Baden, Stadtkreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE122;Karlsruhe, Stadtkreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE123;Karlsruhe, Landkreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE124;Rastatt;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE125;Heidelberg, Stadtkreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE126;Mannheim, Stadtkreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE127;Neckar-Odenwald-Kreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE128;Rhein-Neckar-Kreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE129;Pforzheim, Stadtkreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE12A;Calw;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE12B;Enzkreis;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE12C;Freudenstadt;DE12;Karlsruhe;DE1;Baden-Württemberg;DE;Germany
+DE131;Freiburg im Breisgau, Stadtkreis;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE132;Breisgau-Hochschwarzwald;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE133;Emmendingen;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE134;Ortenaukreis;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE135;Rottweil;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE136;Schwarzwald-Baar-Kreis;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE137;Tuttlingen;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE138;Konstanz;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE139;Lörrach;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE13A;Waldshut;DE13;Freiburg;DE1;Baden-Württemberg;DE;Germany
+DE141;Reutlingen;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE142;Tübingen;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE143;Zollernalbkreis;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE144;Ulm, Stadtkreis;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE145;Alb-Donau-Kreis;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE146;Biberach;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE147;Bodenseekreis;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE148;Ravensburg;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE149;Sigmaringen;DE14;Tübingen;DE1;Baden-Württemberg;DE;Germany
+DE211;Ingolstadt, Kreisfreie Stadt;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE212;München, Kreisfreie Stadt;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE213;Rosenheim, Kreisfreie Stadt;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE214;Altötting;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE215;Berchtesgadener Land;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE216;Bad Tölz-Wolfratshausen;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE217;Dachau;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE218;Ebersberg;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE219;Eichstätt;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21A;Erding;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21B;Freising;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21C;Fürstenfeldbruck;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21D;Garmisch-Partenkirchen;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21E;Landsberg am Lech;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21F;Miesbach;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21G;Mühldorf a. Inn;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21H;München, Landkreis;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21I;Neuburg-Schrobenhausen;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21J;Pfaffenhofen a. d. Ilm;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21K;Rosenheim, Landkreis;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21L;Starnberg;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21M;Traunstein;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE21N;Weilheim-Schongau;DE21;Oberbayern;DE2;Bayern;DE;Germany
+DE221;Landshut, Kreisfreie Stadt;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE222;Passau, Kreisfreie Stadt;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE223;Straubing, Kreisfreie Stadt;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE224;Deggendorf;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE225;Freyung-Grafenau;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE226;Kelheim;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE227;Landshut, Landkreis;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE228;Passau, Landkreis;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE229;Regen;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE22A;Rottal-Inn;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE22B;Straubing-Bogen;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE22C;Dingolfing-Landau;DE22;Niederbayern;DE2;Bayern;DE;Germany
+DE231;Amberg, Kreisfreie Stadt;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE232;Regensburg, Kreisfreie Stadt;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE233;Weiden i. d. OPf, Kreisfreie Stadt;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE234;Amberg-Sulzbach;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE235;Cham;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE236;Neumarkt i. d. OPf.;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE237;Neustadt a. d. Waldnaab;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE238;Regensburg, Landkreis;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE239;Schwandorf;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE23A;Tirschenreuth;DE23;Oberpfalz;DE2;Bayern;DE;Germany
+DE241;Bamberg, Kreisfreie Stadt;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE242;Bayreuth, Kreisfreie Stadt;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE243;Coburg, Kreisfreie Stadt;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE244;Hof, Kreisfreie Stadt;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE245;Bamberg, Landkreis;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE246;Bayreuth, Landkreis;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE247;Coburg, Landkreis;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE248;Forchheim;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE249;Hof, Landkreis;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE24A;Kronach;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE24B;Kulmbach;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE24C;Lichtenfels;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE24D;Wunsiedel i. Fichtelgebirge;DE24;Oberfranken;DE2;Bayern;DE;Germany
+DE251;Ansbach, Kreisfreie Stadt;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE252;Erlangen, Kreisfreie Stadt;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE253;Fürth, Kreisfreie Stadt;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE254;Nürnberg, Kreisfreie Stadt;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE255;Schwabach, Kreisfreie Stadt;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE256;Ansbach, Landkreis;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE257;Erlangen-Höchstadt;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE258;Fürth, Landkreis;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE259;Nürnberger Land;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE25A;Neustadt a. d. Aisch-Bad Windsheim;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE25B;Roth;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE25C;Weißenburg-Gunzenhausen;DE25;Mittelfranken;DE2;Bayern;DE;Germany
+DE261;Aschaffenburg, Kreisfreie Stadt;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE262;Schweinfurt, Kreisfreie Stadt;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE263;Würzburg, Kreisfreie Stadt;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE264;Aschaffenburg, Landkreis;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE265;Bad Kissingen;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE266;Rhön-Grabfeld;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE267;Haßberge;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE268;Kitzingen;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE269;Miltenberg;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE26A;Main-Spessart;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE26B;Schweinfurt, Landkreis;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE26C;Würzburg, Landkreis;DE26;Unterfranken;DE2;Bayern;DE;Germany
+DE271;Augsburg, Kreisfreie Stadt;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE272;Kaufbeuren, Kreisfreie Stadt;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE273;Kempten (Allgäu), Kreisfreie Stadt;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE274;Memmingen, Kreisfreie Stadt;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE275;Aichach-Friedberg;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE276;Augsburg, Landkreis;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE277;Dillingen a. d. Donau;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE278;Günzburg;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE279;Neu-Ulm;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE27A;Lindau (Bodensee);DE27;Schwaben;DE2;Bayern;DE;Germany
+DE27B;Ostallgäu;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE27C;Unterallgäu;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE27D;Donau-Ries;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE27E;Oberallgäu;DE27;Schwaben;DE2;Bayern;DE;Germany
+DE300;Berlin;DE30;Berlin;DE3;Berlin;DE;Germany
+DE401;Brandenburg an der Havel, Kreisfreie Stadt;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE402;Cottbus, Kreisfreie Stadt;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE403;Frankfurt (Oder), Kreisfreie Stadt;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE404;Potsdam, Kreisfreie Stadt;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE405;Barnim;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE406;Dahme-Spreewald;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE407;Elbe-Elster;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE408;Havelland;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE409;Märkisch-Oderland;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40A;Oberhavel;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40B;Oberspreewald-Lausitz;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40C;Oder-Spree;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40D;Ostprignitz-Ruppin;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40E;Potsdam-Mittelmark;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40F;Prignitz;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40G;Spree-Neiße;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40H;Teltow-Fläming;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE40I;Uckermark;DE40;Brandenburg ;DE4;Brandenburg;DE;Germany
+DE501;Bremen, Kreisfreie Stadt;DE50;Bremen;DE5;Bremen;DE;Germany
+DE502;Bremerhaven, Kreisfreie Stadt;DE50;Bremen;DE5;Bremen;DE;Germany
+DE600;Hamburg ;DE60;Hamburg;DE6;Hamburg;DE;Germany
+DE711;Darmstadt, Kreisfreie Stadt;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE712;Frankfurt am Main, Kreisfreie Stadt;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE713;Offenbach am Main, Kreisfreie Stadt;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE714;Wiesbaden, Kreisfreie Stadt;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE715;Bergstraße;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE716;Darmstadt-Dieburg;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE717;Groß-Gerau;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE718;Hochtaunuskreis;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE719;Main-Kinzig-Kreis;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE71A;Main-Taunus-Kreis;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE71B;Odenwaldkreis;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE71C;Offenbach, Landkreis;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE71D;Rheingau-Taunus-Kreis;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE71E;Wetteraukreis;DE71;Darmstadt;DE7;Hessen;DE;Germany
+DE721;Gießen;DE72;Gießen;DE7;Hessen;DE;Germany
+DE722;Lahn-Dill-Kreis;DE72;Gießen;DE7;Hessen;DE;Germany
+DE723;Limburg-Weilburg;DE72;Gießen;DE7;Hessen;DE;Germany
+DE724;Marburg-Biedenkopf;DE72;Gießen;DE7;Hessen;DE;Germany
+DE725;Vogelsbergkreis;DE72;Gießen;DE7;Hessen;DE;Germany
+DE731;Kassel, Kreisfreie Stadt;DE73;Kassel;DE7;Hessen;DE;Germany
+DE732;Fulda;DE73;Kassel;DE7;Hessen;DE;Germany
+DE733;Hersfeld-Rotenburg;DE73;Kassel;DE7;Hessen;DE;Germany
+DE734;Kassel, Landkreis;DE73;Kassel;DE7;Hessen;DE;Germany
+DE735;Schwalm-Eder-Kreis;DE73;Kassel;DE7;Hessen;DE;Germany
+DE736;Waldeck-Frankenberg;DE73;Kassel;DE7;Hessen;DE;Germany
+DE737;Werra-Meißner-Kreis;DE73;Kassel;DE7;Hessen;DE;Germany
+DE803;Rostock, Kreisfreie Stadt;DE80;Mecklenburg-Vorpommern;DE8;Mecklenburg-Vorpommern;DE;Germany
+DE804;Schwerin, Kreisfreie Stadt;DE80;Mecklenburg-Vorpommern;DE8;Mecklenburg-Vorpommern;DE;Germany
+DE80J;Mecklenburgische Seenplatte;DE80;Mecklenburg-Vorpommern;DE8;Mecklenburg-Vorpommern;DE;Germany
+DE80K;Rostock, Landkreis;DE80;Mecklenburg-Vorpommern;DE8;Mecklenburg-Vorpommern;DE;Germany
+DE80L;Vorpommern-Rügen;DE80;Mecklenburg-Vorpommern;DE8;Mecklenburg-Vorpommern;DE;Germany
+DE80M;Nordwestmecklenburg;DE80;Mecklenburg-Vorpommern;DE8;Mecklenburg-Vorpommern;DE;Germany
+DE80N;Vorpommern-Greifswald;DE80;Mecklenburg-Vorpommern;DE8;Mecklenburg-Vorpommern;DE;Germany
+DE80O;Ludwigslust-Parchim;DE80;Mecklenburg-Vorpommern;DE8;Mecklenburg-Vorpommern;DE;Germany
+DE911;Braunschweig, Kreisfreie Stadt;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE912;Salzgitter, Kreisfreie Stadt;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE913;Wolfsburg, Kreisfreie Stadt;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE914;Gifhorn;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE916;Goslar;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE917;Helmstedt;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE918;Northeim;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE919;Osterode am Harz;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE91A;Peine;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE91B;Wolfenbüttel;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE91C;Göttingen;DE91;Braunschweig;DE9;Niedersachsen;DE;Germany
+DE922;Diepholz;DE92;Hannover;DE9;Niedersachsen;DE;Germany
+DE923;Hameln-Pyrmont;DE92;Hannover;DE9;Niedersachsen;DE;Germany
+DE925;Hildesheim;DE92;Hannover;DE9;Niedersachsen;DE;Germany
+DE926;Holzminden;DE92;Hannover;DE9;Niedersachsen;DE;Germany
+DE927;Nienburg/Weser;DE92;Hannover;DE9;Niedersachsen;DE;Germany
+DE928;Schaumburg;DE92;Hannover;DE9;Niedersachsen;DE;Germany
+DE929;Region Hannover;DE92;Hannover;DE9;Niedersachsen;DE;Germany
+DE931;Celle;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE932;Cuxhaven;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE933;Harburg;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE934;Lüchow-Dannenberg;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE935;Lüneburg;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE936;Osterholz;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE937;Rotenburg (Wümme);DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE938;Heidekreis;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE939;Stade;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE93A;Uelzen;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE93B;Verden;DE93;Lüneburg;DE9;Niedersachsen;DE;Germany
+DE941;Delmenhorst, Kreisfreie Stadt;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE942;Emden, Kreisfreie Stadt;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE943;Oldenburg (Oldb), Kreisfreie Stadt;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE944;Osnabrück, Kreisfreie Stadt;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE945;Wilhelmshaven, Kreisfreie Stadt;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE946;Ammerland;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE947;Aurich;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE948;Cloppenburg;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE949;Emsland;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE94A;Friesland (DE);DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE94B;Grafschaft Bentheim;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE94C;Leer;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE94D;Oldenburg, Landkreis;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE94E;Osnabrück, Landkreis;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE94F;Vechta;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE94G;Wesermarsch;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DE94H;Wittmund;DE94;Weser-Ems;DE9;Niedersachsen;DE;Germany
+DEA11;Düsseldorf, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA12;Duisburg, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA13;Essen, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA14;Krefeld, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA15;Mönchengladbach, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA16;Mülheim an der Ruhr, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA17;Oberhausen, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA18;Remscheid, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA19;Solingen, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA1A;Wuppertal, Kreisfreie Stadt;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA1B;Kleve;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA1C;Mettmann;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA1D;Rhein-Kreis Neuss;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA1E;Viersen;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA1F;Wesel;DEA1;Düsseldorf;DEA;Nordrhein-Westfalen;DE;Germany
+DEA22;Bonn, Kreisfreie Stadt;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA23;Köln, Kreisfreie Stadt;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA24;Leverkusen, Kreisfreie Stadt;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA26;Düren;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA27;Rhein-Erft-Kreis;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA28;Euskirchen;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA29;Heinsberg;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA2A;Oberbergischer Kreis;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA2B;Rheinisch-Bergischer Kreis;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA2C;Rhein-Sieg-Kreis;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA2D;Städteregion Aachen;DEA2;Köln;DEA;Nordrhein-Westfalen;DE;Germany
+DEA31;Bottrop, Kreisfreie Stadt;DEA3;Münster;DEA;Nordrhein-Westfalen;DE;Germany
+DEA32;Gelsenkirchen, Kreisfreie Stadt;DEA3;Münster;DEA;Nordrhein-Westfalen;DE;Germany
+DEA33;Münster, Kreisfreie Stadt;DEA3;Münster;DEA;Nordrhein-Westfalen;DE;Germany
+DEA34;Borken;DEA3;Münster;DEA;Nordrhein-Westfalen;DE;Germany
+DEA35;Coesfeld;DEA3;Münster;DEA;Nordrhein-Westfalen;DE;Germany
+DEA36;Recklinghausen;DEA3;Münster;DEA;Nordrhein-Westfalen;DE;Germany
+DEA37;Steinfurt;DEA3;Münster;DEA;Nordrhein-Westfalen;DE;Germany
+DEA38;Warendorf;DEA3;Münster;DEA;Nordrhein-Westfalen;DE;Germany
+DEA41;Bielefeld, Kreisfreie Stadt;DEA4;Detmold;DEA;Nordrhein-Westfalen;DE;Germany
+DEA42;Gütersloh;DEA4;Detmold;DEA;Nordrhein-Westfalen;DE;Germany
+DEA43;Herford;DEA4;Detmold;DEA;Nordrhein-Westfalen;DE;Germany
+DEA44;Höxter;DEA4;Detmold;DEA;Nordrhein-Westfalen;DE;Germany
+DEA45;Lippe;DEA4;Detmold;DEA;Nordrhein-Westfalen;DE;Germany
+DEA46;Minden-Lübbecke;DEA4;Detmold;DEA;Nordrhein-Westfalen;DE;Germany
+DEA47;Paderborn;DEA4;Detmold;DEA;Nordrhein-Westfalen;DE;Germany
+DEA51;Bochum, Kreisfreie Stadt;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA52;Dortmund, Kreisfreie Stadt;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA53;Hagen, Kreisfreie Stadt;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA54;Hamm, Kreisfreie Stadt;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA55;Herne, Kreisfreie Stadt;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA56;Ennepe-Ruhr-Kreis;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA57;Hochsauerlandkreis;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA58;Märkischer Kreis;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA59;Olpe;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA5A;Siegen-Wittgenstein;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA5B;Soest;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEA5C;Unna;DEA5;Arnsberg;DEA;Nordrhein-Westfalen;DE;Germany
+DEB11;Koblenz, Kreisfreie Stadt;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB12;Ahrweiler;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB13;Altenkirchen (Westerwald);DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB14;Bad Kreuznach;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB15;Birkenfeld;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB17;Mayen-Koblenz;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB18;Neuwied;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB1A;Rhein-Lahn-Kreis;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB1B;Westerwaldkreis;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB1C;Cochem-Zell;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB1D;Rhein-Hunsrück-Kreis;DEB1;Koblenz;DEB;Rheinland-Pfalz;DE;Germany
+DEB21;Trier, Kreisfreie Stadt;DEB2;Trier;DEB;Rheinland-Pfalz;DE;Germany
+DEB22;Bernkastel-Wittlich;DEB2;Trier;DEB;Rheinland-Pfalz;DE;Germany
+DEB23;Eifelkreis Bitburg-Prüm;DEB2;Trier;DEB;Rheinland-Pfalz;DE;Germany
+DEB24;Vulkaneifel;DEB2;Trier;DEB;Rheinland-Pfalz;DE;Germany
+DEB25;Trier-Saarburg;DEB2;Trier;DEB;Rheinland-Pfalz;DE;Germany
+DEB31;Frankenthal (Pfalz), Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB32;Kaiserslautern, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB33;Landau in der Pfalz, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB34;Ludwigshafen am Rhein, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB35;Mainz, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB36;Neustadt an der Weinstraße, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB37;Pirmasens, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB38;Speyer, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB39;Worms, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3A;Zweibrücken, Kreisfreie Stadt;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3B;Alzey-Worms;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3C;Bad Dürkheim;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3D;Donnersbergkreis;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3E;Germersheim;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3F;Kaiserslautern, Landkreis;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3G;Kusel;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3H;Südliche Weinstraße;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3I;Rhein-Pfalz-Kreis;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3J;Mainz-Bingen;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEB3K;Südwestpfalz;DEB3;Rheinhessen-Pfalz;DEB;Rheinland-Pfalz;DE;Germany
+DEC01;Regionalverband Saarbrücken;DEC0;Saarland;DEC;Saarland;DE;Germany
+DEC02;Merzig-Wadern;DEC0;Saarland;DEC;Saarland;DE;Germany
+DEC03;Neunkirchen;DEC0;Saarland;DEC;Saarland;DE;Germany
+DEC04;Saarlouis;DEC0;Saarland;DEC;Saarland;DE;Germany
+DEC05;Saarpfalz-Kreis;DEC0;Saarland;DEC;Saarland;DE;Germany
+DEC06;St. Wendel;DEC0;Saarland;DEC;Saarland;DE;Germany
+DED21;Dresden, Kreisfreie Stadt;DED2;Dresden;DED;Sachsen;DE;Germany
+DED2C;Bautzen;DED2;Dresden;DED;Sachsen;DE;Germany
+DED2D;Görlitz;DED2;Dresden;DED;Sachsen;DE;Germany
+DED2E;Meißen;DED2;Dresden;DED;Sachsen;DE;Germany
+DED2F;Sächsische Schweiz-Osterzgebirge;DED2;Dresden;DED;Sachsen;DE;Germany
+DED41;Chemnitz, Kreisfreie Stadt;DED4;Chemnitz;DED;Sachsen;DE;Germany
+DED42;Erzgebirgskreis;DED4;Chemnitz;DED;Sachsen;DE;Germany
+DED43;Mittelsachsen;DED4;Chemnitz;DED;Sachsen;DE;Germany
+DED44;Vogtlandkreis;DED4;Chemnitz;DED;Sachsen;DE;Germany
+DED45;Zwickau;DED4;Chemnitz;DED;Sachsen;DE;Germany
+DED51;Leipzig, Kreisfreie Stadt;DED5;Leipzig;DED;Sachsen;DE;Germany
+DED52;Leipzig;DED5;Leipzig;DED;Sachsen;DE;Germany
+DED53;Nordsachsen;DED5;Leipzig;DED;Sachsen;DE;Germany
+DEE01;Dessau-Roßlau, Kreisfreie Stadt;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE02;Halle (Saale), Kreisfreie Stadt;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE03;Magdeburg, Kreisfreie Stadt;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE04;Altmarkkreis Salzwedel;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE05;Anhalt-Bitterfeld;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE06;Jerichower Land;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE07;Börde;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE08;Burgenlandkreis;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE09;Harz;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE0A;Mansfeld-Südharz;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE0B;Saalekreis;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE0C;Salzlandkreis;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE0D;Stendal;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEE0E;Wittenberg;DEE0;Sachsen-Anhalt;DEE;Sachsen-Anhalt;DE;Germany
+DEF01;Flensburg, Kreisfreie Stadt;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF02;Kiel, Kreisfreie Stadt;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF03;Lübeck, Kreisfreie Stadt;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF04;Neumünster, Kreisfreie Stadt;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF05;Dithmarschen;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF06;Herzogtum Lauenburg;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF07;Nordfriesland;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF08;Ostholstein;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF09;Pinneberg;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF0A;Plön;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF0B;Rendsburg-Eckernförde;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF0C;Schleswig-Flensburg;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF0D;Segeberg;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF0E;Steinburg;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEF0F;Stormarn;DEF0;Schleswig-Holstein;DEF;Schleswig-Holstein;DE;Germany
+DEG01;Erfurt, Kreisfreie Stadt;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG02;Gera, Kreisfreie Stadt;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG03;Jena, Kreisfreie Stadt;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG04;Suhl, Kreisfreie Stadt;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG05;Weimar, Kreisfreie Stadt;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG06;Eichsfeld;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG07;Nordhausen;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG09;Unstrut-Hainich-Kreis;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0A;Kyffhäuserkreis;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0B;Schmalkalden-Meiningen;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0C;Gotha;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0D;Sömmerda;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0E;Hildburghausen;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0F;Ilm-Kreis;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0G;Weimarer Land;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0H;Sonneberg;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0I;Saalfeld-Rudolstadt;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0J;Saale-Holzland-Kreis;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0K;Saale-Orla-Kreis;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0L;Greiz;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0M;Altenburger Land;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0N;Eisenach, Kreisfreie Stadt;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+DEG0P;Wartburgkreis;DEG0;Thüringen;DEG;Thüringen;DE;Germany
+RO111 ;Bihor County;RO11 ;Nord-Vest;RO1 ;Macroregion one;RO;Romania
+RO112 ;Bistri?a-N?s?ud County;RO11 ;Nord-Vest;RO1 ;Macroregion one;RO;Romania
+RO113 ;Cluj County;RO11;Nord-Vest;RO1;Macroregion one;RO;Romania
+RO114 ;Maramure? County;RO11;Nord-Vest;RO1;Macroregion one;RO;Romania
+RO115 ;Satu Mare County;RO11;Nord-Vest;RO1;Macroregion one;RO;Romania
+RO116 ;S?laj County;RO11;Nord-Vest;RO1;Macroregion one;RO;Romania
+RO121; Alba County;RO12;Centru;RO1;Macroregion one;RO;Romania
+RO122 ;Bra?ov County;RO12;Centru;RO1;Macroregion one;RO;Romania
+RO123 ;Covasna County;RO12;Centru;RO1;Macroregion one;RO;Romania
+RO124 ;Harghita County;RO12;Centru;RO1;Macroregion one;RO;Romania
+RO125 ;Mure? County;RO12;Centru;RO1;Macroregion one;RO;Romania
+RO126 ;Sibiu County;RO12;Centru;RO1;Macroregion one;RO;Romania
+RO211; Bac?u County;RO21;Nord-Est;RO2; Macroregion two;RO;Romania
+RO212; Boto?ani County;RO21;Nord-Est;RO2; Macroregion two;RO;Romania
+RO213; Ia?i County;RO21;Nord-Est;RO2; Macroregion two;RO;Romania
+RO214; Neam? County;RO21;Nord-Est;RO2; Macroregion two;RO;Romania
+RO215; Suceava County;RO21;Nord-Est;RO2; Macroregion two;RO;Romania
+RO216; Vaslui County;RO21;Nord-Est;RO2; Macroregion two;RO;Romania
+RO221; Br?ila County;RO22; Sud-Est;RO2; Macroregion two;RO;Romania
+RO222; Buz?u County;RO22; Sud-Est;RO2; Macroregion two;RO;Romania
+RO223; Constan?a County;RO22; Sud-Est;RO2; Macroregion two;RO;Romania
+RO224; Gala?i County;RO22; Sud-Est;RO2; Macroregion two;RO;Romania
+RO225; Tulcea County;RO22; Sud-Est;RO2; Macroregion two;RO;Romania
+RO226; Vrancea County;RO22; Sud-Est;RO2; Macroregion two;RO;Romania
+RO311; Arge? County;RO31; Sud-Muntenia;RO3; Macroregion three;RO;Romania
+RO312; C?l?ra?i County;RO31; Sud-Muntenia;RO3; Macroregion three;RO;Romania
+RO313; Dâmbovi?a County;RO31; Sud-Muntenia;RO3; Macroregion three;RO;Romania
+RO314; Giurgiu County;RO31; Sud-Muntenia;RO3; Macroregion three;RO;Romania
+RO315; Ialomi?a County;RO31; Sud-Muntenia;RO3; Macroregion three;RO;Romania
+RO316; Prahova County;RO31; Sud-Muntenia;RO3; Macroregion three;RO;Romania
+RO317; Teleorman County;RO31; Sud-Muntenia;RO3; Macroregion three;RO;Romania
+RO321; Bucure?ti;RO32; Bucure?ti-Ilfov;RO3; Macroregion three;RO;Romania
+RO322; Ilfov County;RO32; Bucure?ti-Ilfov;RO3; Macroregion three;RO;Romania
+RO411; Dolj County;RO41; Sud-Vest Oltenia;RO4; Macroregion four;RO;Romania
+RO412; Gorj County;RO41; Sud-Vest Oltenia;RO4; Macroregion four;RO;Romania
+RO413; Mehedin?i County;RO41; Sud-Vest Oltenia;RO4; Macroregion four;RO;Romania
+RO414; Olt County;RO41; Sud-Vest Oltenia;RO4; Macroregion four;RO;Romania
+RO415; Vâlcea County;RO41; Sud-Vest Oltenia;RO4; Macroregion four;RO;Romania
+RO421; Arad County;RO42; Vest;RO4; Macroregion four;RO;Romania
+RO422; Cara?-Severin County;RO42; Vest;RO4; Macroregion four;RO;Romania
+RO423; Hunedoara County;RO42; Vest;RO4; Macroregion four;RO;Romania
+RO424; Timi? County;RO42; Vest;RO4; Macroregion four;RO;Romania
+SK010; Bratislava Region;SK01; Bratislava Region;SK0; Slovakia;SK;Slovakia
+SK021; Trnava Region;SK02; Western Slovakia (Západné Slovensko);SK0; Slovakia;SK;Slovakia
+SK022; Tren?ín Region;SK02; Western Slovakia (Západné Slovensko);SK0; Slovakia;SK;Slovakia
+SK023; Nitra Region;SK02; Western Slovakia (Západné Slovensko);SK0; Slovakia;SK;Slovakia
+SK031; Žilina Region;SK03; Central Slovakia (Stredné Slovensko);SK0; Slovakia;SK;Slovakia
+SK032; Banská Bystrica Region;SK03; Central Slovakia (Stredné Slovensko);SK0; Slovakia;SK;Slovakia
+SK041; Prešov Region;SK04; Eastern Slovakia (Východné Slovensko);SK0; Slovakia;SK;Slovakia
+SK042; Košice Region;SK04; Eastern Slovakia (Východné Slovensko);SK0; Slovakia;SK;Slovakia
+PL711;Miasto ?ód?;PL71;?ódzkie;PL7;MAKROREGION CENTRALNY;PL;Poland
+PL712;?ódzki;PL71;?ódzkie;PL7;MAKROREGION CENTRALNY;PL;Poland
+PL713;Piotrkowski;PL71;?ódzkie;PL7;MAKROREGION CENTRALNY;PL;Poland
+PL714;Sieradzki;PL71;?ódzkie;PL7;MAKROREGION CENTRALNY;PL;Poland
+PL715;Skierniewicki;PL71;?ódzkie;PL7;MAKROREGION CENTRALNY;PL;Poland
+PL721;Kielecki;PL72;?wi?tokrzyskie;PL7;MAKROREGION CENTRALNY;PL;Poland
+PL722;Sandomiersko-j?drzejowski;PL72;?wi?tokrzyskie;PL7;MAKROREGION CENTRALNY;PL;Poland
+PL213;Miasto Kraków;PL21;Ma?opolskie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL214;Krakowski;PL21;Ma?opolskie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL217;Tarnowski;PL21;Ma?opolskie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL218;Nowos?decki;PL21;Ma?opolskie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL219;Nowotarski;PL21;Ma?opolskie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL21A;O?wi?cimski;PL21;Ma?opolskie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL224;Cz?stochowski;PL22;?l?skie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL225;Bielski;PL22;?l?skie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL227;Rybnicki;PL22;?l?skie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL228;Bytomski;PL22;?l?skie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL229;Gliwicki;PL22;?l?skie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL22A;Katowicki;PL22;?l?skie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL22B;Sosnowiecki;PL22;?l?skie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL22C;Tyski;PL22;?l?skie;PL2;MAKROREGION PO?UDNIOWY;PL;Poland
+PL811;Bialski;PL81;Lubelskie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL812;Che?msko-zamojski;PL81;Lubelskie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL814;Lubelski;PL81;Lubelskie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL815;Pu?awski;PL81;Lubelskie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL821;Kro?nie?ski;PL82;Podkarpackie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL822;Przemyski;PL82;Podkarpackie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL823;Rzeszowski;PL82;Podkarpackie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL824;Tarnobrzeski;PL82;Podkarpackie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL841;Bia?ostocki;PL84;Podlaskie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL842;?om?y?ski;PL84;Podlaskie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL843;Suwalski;PL84;Podlaskie;PL8;MAKROREGION WSCHODNI;PL;Poland
+PL411;Pilski;PL41;Wielkopolskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL414;Koni?ski;PL41;Wielkopolskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL415;Miasto Pozna?;PL41;Wielkopolskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL416;Kaliski;PL41;Wielkopolskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL417;Leszczy?ski;PL41;Wielkopolskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL418;Pozna?ski;PL41;Wielkopolskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL424;Miasto Szczecin;PL42;Zachodniopomorskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL426;Koszali?ski;PL42;Zachodniopomorskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL427;Szczecinecko-pyrzycki;PL42;Zachodniopomorskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL428;Szczeci?ski;PL42;Zachodniopomorskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL431;Gorzowski;PL43;Lubuskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL432;Zielonogórski;PL43;Lubuskie;PL4;MAKROREGION PÓ?NOCNO-ZACHODNI;PL;Poland
+PL514;Miasto Wroc?aw;PL51;Dolno?l?skie;PL5;MAKROREGION PO?UDNIOWO-ZACHODNI;PL;Poland
+PL515;Jeleniogórski;PL51;Dolno?l?skie;PL5;MAKROREGION PO?UDNIOWO-ZACHODNI;PL;Poland
+PL516;Legnicko-g?ogowski;PL51;Dolno?l?skie;PL5;MAKROREGION PO?UDNIOWO-ZACHODNI;PL;Poland
+PL517;Wa?brzyski;PL51;Dolno?l?skie;PL5;MAKROREGION PO?UDNIOWO-ZACHODNI;PL;Poland
+PL518;Wroc?awski;PL51;Dolno?l?skie;PL5;MAKROREGION PO?UDNIOWO-ZACHODNI;PL;Poland
+PL523;Nyski;PL52;Opolskie;PL5;MAKROREGION PO?UDNIOWO-ZACHODNI;PL;Poland
+PL524;Opolski;PL52;Opolskie;PL5;MAKROREGION PO?UDNIOWO-ZACHODNI;PL;Poland
+PL613;Bydgosko-toru?ski;PL61;Kujawsko-Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL616;Grudzi?dzki;PL61;Kujawsko-Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL617;Inowroc?awski;PL61;Kujawsko-Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL618;?wiecki;PL61;Kujawsko-Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL619;W?oc?awski;PL61;Kujawsko-Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL621;Elbl?ski;PL62;Warmi?sko-Mazurskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL622;Olszty?ski;PL62;Warmi?sko-Mazurskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL623;E?cki;PL62;Warmi?sko-Mazurskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL633;Trójmiejski;PL63;Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL634;Gda?ski;PL63;Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL636;S?upski;PL63;Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL637;Chojnicki;PL63;Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL638;Starogardzki;PL63;Pomorskie;PL6;MAKROREGION PÓ?NOCNY;PL;Poland
+PL911;Miasto Warszawa;PL91;Warszawski sto?eczny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+PL912;Warszawski wschodni;PL91;Warszawski sto?eczny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+PL913;Warszawski zachodni;PL91;Warszawski sto?eczny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+PL921;Radomski;PL92;Mazowiecki regionalny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+PL922;Ciechanowski;PL92;Mazowiecki regionalny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+PL923;P?ocki;PL92;Mazowiecki regionalny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+PL924;Ostro??cki;PL92;Mazowiecki regionalny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+PL925;Siedlecki;PL92;Mazowiecki regionalny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+PL926;?yrardowski;PL92;Mazowiecki regionalny;PL9;MAKROREGION WOJEWÓDZTWO MAZOWIECKIE;PL;Poland
+ITC11;Torino;ITC1;Piemonte;ITC;Northwest Italy;IT;Italy
+ITC12;Vercelli;ITC1;Piemonte;ITC;Northwest Italy;IT;Italy
+ITC13;Biella;ITC1;Piemonte;ITC;Northwest Italy;IT;Italy
+ITC14;Verbano-Cusio-Ossola;ITC1;Piemonte;ITC;Northwest Italy;IT;Italy
+ITC15;Novara;ITC1;Piemonte;ITC;Northwest Italy;IT;Italy
+ITC16;Cuneo;ITC1;Piemonte;ITC;Northwest Italy;IT;Italy
+ITC17;Asti;ITC1;Piemonte;ITC;Northwest Italy;IT;Italy
+ITC18;Alessandria;ITC1;Piemonte;ITC;Northwest Italy;IT;Italy
+ITC20;Aosta;ITC2;Valle d'Aosta;ITC;Northwest Italy;IT;Italy
+ITC31;Imperia;ITC3;Liguria;ITC;Northwest Italy;IT;Italy
+ITC32;Savona;ITC3;Liguria;ITC;Northwest Italy;IT;Italy
+ITC33;Genova;ITC3;Liguria;ITC;Northwest Italy;IT;Italy
+ITC34;La Spezia;ITC3;Liguria;ITC;Northwest Italy;IT;Italy
+ITC41;Varese;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC42;Como;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC43;Lecco;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC44;Sondrio;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC46;Bergamo;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC47;Brescia;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC48;Pavia;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC49;Lodi;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC4A;Cremona;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC4B;Mantova;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC4C;Milano;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITC4D;Monza and Brianza;ITC4;Lombardia;ITC;Northwest Italy;IT;Italy
+ITF11;L'Aquila;ITF1;Abruzzo;ITF;South Italy;IT;Italy
+ITF12;Teramo;ITF1;Abruzzo;ITF;South Italy;IT;Italy
+ITF13;Pescara;ITF1;Abruzzo;ITF;South Italy;IT;Italy
+ITF14;Chieti;ITF1;Abruzzo;ITF;South Italy;IT;Italy
+ITF21;Isernia;ITF2;Molise;ITF;South Italy;IT;Italy
+ITF22;Campobasso;ITF2;Molise;ITF;South Italy;IT;Italy
+ITF31;Caserta;ITF3;Campania;ITF;South Italy;IT;Italy
+ITF32;Benevento;ITF3;Campania;ITF;South Italy;IT;Italy
+ITF33;Napoli;ITF3;Campania;ITF;South Italy;IT;Italy
+ITF34;Avellino;ITF3;Campania;ITF;South Italy;IT;Italy
+ITF35;Salerno;ITF3;Campania;ITF;South Italy;IT;Italy
+ITF43;Taranto;ITF4;Puglia;ITF;South Italy;IT;Italy
+ITF44;Brindisi;ITF4;Puglia;ITF;South Italy;IT;Italy
+ITF45;Lecce;ITF4;Puglia;ITF;South Italy;IT;Italy
+ITF46;Foggia;ITF4;Puglia;ITF;South Italy;IT;Italy
+ITF47;Bari;ITF4;Puglia;ITF;South Italy;IT;Italy
+ITF48;Barletta-Andria-Trani;ITF4;Puglia;ITF;South Italy;IT;Italy
+ITF51;Potenza;ITF5;Basilicata;ITF;South Italy;IT;Italy
+ITF52;Matera;ITF5;Basilicata;ITF;South Italy;IT;Italy
+ITF61;Cosenza;ITF6;Calabria;ITF;South Italy;IT;Italy
+ITF62;Crotone;ITF6;Calabria;ITF;South Italy;IT;Italy
+ITF63;Catanzaro;ITF6;Calabria;ITF;South Italy;IT;Italy
+ITF64;Vibo Valentia;ITF6;Calabria;ITF;South Italy;IT;Italy
+ITF65;Reggio Calabria;ITF6;Calabria;ITF;South Italy;IT;Italy
+ITG11;Trapani;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG12;Palermo;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG13;Messina;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG14;Agrigento;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG15;Caltanissetta;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG16;Enna;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG17;Catania;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG18;Ragusa;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG19;Siracusa;ITG1;Sicilia;ITG;Insular Italy;IT;Italy
+ITG25;Sassari;ITG2;Sardegna;ITG;Insular Italy;IT;Italy
+ITG26;Nuoro;ITG2;Sardegna;ITG;Insular Italy;IT;Italy
+ITG27;Cagliari;ITG2;Sardegna;ITG;Insular Italy;IT;Italy
+ITG28;Oristano;ITG2;Sardegna;ITG;Insular Italy;IT;Italy
+ITG29;Olbia-Tempio;ITG2;Sardegna;ITG;Insular Italy;IT;Italy
+ITG2A;Ogliastra;ITG2;Sardegna;ITG;Insular Italy;IT;Italy
+ITG2B;Medio Campidano;ITG2;Sardegna;ITG;Insular Italy;IT;Italy
+ITG2C;Carbonia-Iglesias;ITG2;Sardegna;ITG;Insular Italy;IT;Italy
+ITH10;South Tyrol;ITH1;Trentino-Alto Adige/Südtirol;ITH;Northeast Italy;IT;Italy
+ITH20;Trento;ITH2;Trentino-Alto Adige/Südtirol;ITH;Northeast Italy;IT;Italy
+ITH31;Verona;ITH3;Veneto;ITH;Northeast Italy;IT;Italy
+ITH32;Vicenza;ITH3;Veneto;ITH;Northeast Italy;IT;Italy
+ITH33;Belluno;ITH3;Veneto;ITH;Northeast Italy;IT;Italy
+ITH34;Treviso;ITH3;Veneto;ITH;Northeast Italy;IT;Italy
+ITH35;Venezia;ITH3;Veneto;ITH;Northeast Italy;IT;Italy
+ITH36;Padova;ITH3;Veneto;ITH;Northeast Italy;IT;Italy
+ITH37;Rovigo;ITH3;Veneto;ITH;Northeast Italy;IT;Italy
+ITH41;Pordenone;ITH4;Friuli-Venezia Giulia;ITH;Northeast Italy;IT;Italy
+ITH42;Udine;ITH4;Friuli-Venezia Giulia;ITH;Northeast Italy;IT;Italy
+ITH43;Gorizia;ITH4;Friuli-Venezia Giulia;ITH;Northeast Italy;IT;Italy
+ITH44;Trieste;ITH4;Friuli-Venezia Giulia;ITH;Northeast Italy;IT;Italy
+ITDH1;Piacenza;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITDH2;Parma;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITDH3;Reggio Emilia;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITDH4;Modena;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITDH5;Bologna;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITDH6;Ferrara;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITDH7;Ravenna;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITDH8;Forlì-Cesena;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITDH9;Rimini;ITH5;Emilia-Romagna;ITH;Northeast Italy;IT;Italy
+ITI11;Massa-Carrara;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI12;Lucca;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI13;Pistoia;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI14;Firenze;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI15;Prato;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI16;Livorno;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI17;Pisa;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI18;Arezzo;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI19;Siena;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI1A;Grosseto;ITI1;Toscana;ITI;Central Italy;IT;Italy
+ITI21;Perugia;ITI2;Umbria;ITI;Central Italy;IT;Italy
+ITI22;Terni;ITI2;Umbria;ITI;Central Italy;IT;Italy
+ITI31;Pesaro-Urbino;ITI3;Marche;ITI;Central Italy;IT;Italy
+ITI32;Ancona;ITI3;Marche;ITI;Central Italy;IT;Italy
+ITI33;Macerata;ITI3;Marche;ITI;Central Italy;IT;Italy
+ITI34;Ascoli Piceno;ITI3;Marche;ITI;Central Italy;IT;Italy
+ITI35;Fermo;ITI3;Marche;ITI;Central Italy;IT;Italy
+ITI41;Viterbo;ITI4;Lazio;ITI;Central Italy;IT;Italy
+ITI42;Rieti;ITI4;Lazio;ITI;Central Italy;IT;Italy
+ITI43;Roma;ITI4;Lazio;ITI;Central Italy;IT;Italy
+ITI44;Latina;ITI4;Lazio;ITI;Central Italy;IT;Italy
+ITI45;Frosinone;ITI4;Lazio;ITI;Central Italy;IT;Italy

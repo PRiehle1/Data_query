@@ -1,0 +1,217 @@
+---
+title: "Unemployment Regression"
+author: "P Riehle"
+date: "13 8 2021"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+# Preface
+
+make sure the following packages are installed: package_list \<-
+c("tidyverse", "OECD")
+
+## check if needed packages are installed
+
+```{r, warning= FALSE}
+
+  libraries = c("tidyverse", "OECD", "tseries","CARS")
+
+  junk = lapply(libraries, function(x) if (!(x %in% installed.packages())) {
+    install.packages(x)
+  })
+  junk = lapply(libraries, library, quietly = TRUE, character.only = TRUE)
+
+```
+
+# Data Part:
+
+## Definition of the needed input data
+
+1:  Unemployment benefits average data: Public unemployment expenditure
+    in percentage of the GDP 
+2:  GDP 
+3:  Number of unemployed persons 
+4:  Annual average wage
+5:  CPI
+
+## Data Function Part
+
+In this part of the code the functin is defined. The function
+automatically downloads and prepares the dataset for the above defined
+variables.
+
+The input of the function is the corresponding country code of the OECD
+(example: Germany = "DEU") One can find a list of the countries at:
+(<https://www.oecd-ilibrary.org/docserver/9789264243439-8-en.pdf?expires=1628938923&id=id&accname=guest&checksum=82341B7046AA2F236762BE86993C53C7>)
+
+```{r}
+generate_dataset_benefits_reg <- function(country){
+# Get all the data Ids from the OECD
+dsets                             <- get_datasets()
+
+### III. Search for the datasets
+
+# 1.:  Unemployment benefits average data: 
+#     Public unemployment expenditure in percentage of the GDP (SOCX_AGG)
+
+# get the id
+string                            <- search_dataset("Social Expenditure - Aggregated data", dsets)
+
+#get the structure of the data
+structure                         <- get_data_structure(string[1])
+
+# get the data frame
+
+# define a filter list based on the structure
+filter_list                       <- list("10","7","0","0","PCT_GDP",country)
+# extract the dataset
+df_SOCX_AGG                       <- get_dataset("SOCX_AGG",filter = filter_list) 
+# delete non necessary columns
+df_SOCX_AGG                       <- df_SOCX_AGG[,-c(1:5,7,8,9)]
+colnames(df_SOCX_AGG)[c(1:3)]     <- c("country","time","unemp_exp_pct_gdp")
+
+# 2:  GDP 
+string                            <- search_dataset("GDP",dsets)
+structure                         <- get_data_structure(string[2,1])
+filter_list                       <- list(country,"B1_GA","C")
+df_SNA_TABEL1                     <- get_dataset(string[2,1], filter = filter_list)
+df_SNA_TABEL1                     <- df_SNA_TABEL1[,-c(2:6,9)]
+df_SNA_TABEL1[,3]                 <- df_SNA_TABEL1[,3] *1000000
+colnames(df_SNA_TABEL1)[c(1:3)]   <- c("country","time","gdp_cp")
+
+
+# 3:  Number of unemployed persons
+string                            <- search_dataset("ALFS", dsets) #ALFS_SUMTAB/DEU.YGTT06L1_ST.A
+structure                         <- get_data_structure(string[2,1])
+filter_list                       <- list(country,"YGTT06L1_ST","A")
+df_ALFS_SUMTAB                    <- get_dataset("ALFS_SUMTAB",filter = filter_list) 
+df_ALFS_SUMTAB                    <-  df_ALFS_SUMTAB[,-c(2:6,9)]
+df_ALFS_SUMTAB[,3]                <- df_ALFS_SUMTAB[,3]*1000
+colnames(df_ALFS_SUMTAB)[c(1:3)]  <- c("country", "time", "unemp_pers")
+
+# 4: Annual average wage
+string                            <- search_dataset("WAGE", dsets) #AV_AN_WAGE/DEU.CPNCU
+structure                         <- get_data_structure(string[3,1])
+filter_list                       <- c(country,"CPNCU")
+df_AV_AN_WAGE                     <- get_dataset(string[3,1],filter = filter_list) 
+df_AV_AN_WAGE                     <- df_AV_AN_WAGE[,-c(2:5)]
+colnames(df_AV_AN_WAGE)[c(1:3)]   <- c("country","time","avg_w_cp")
+
+# 5: CPI 
+
+
+filter_list                       <- c(country,"CPALTT01","IXOB","A")
+df_CPI_base_15                    <- get_dataset("PRICES_CPI", filter = filter_list)
+df_CPI_base_15                    <- df_CPI_base_15[, -c(2:8)]
+colnames(df_CPI_base_15)[c(1:3)]  <- c("country","time","cpi_base_15")
+### Merge the data frames 
+
+# merge two data frames by ID
+df_final                          <- list(df_SNA_TABEL1,df_SOCX_AGG, df_ALFS_SUMTAB,df_AV_AN_WAGE,df_CPI_base_15) %>%                                                reduce(left_join, by = 
+                                     c("country","time"))
+df_final                          <- df_final %>% drop_na()
+
+# calculations:
+# 1. average benefit
+df_final$avg_ben                  <- unname(unlist(df_final[,3])*unlist(df_final[,4])/100/unlist(df_final[,5]))
+
+# 2. real GDP
+df_final$r_gdp                    <- df_final$gdp_cp/(df_final$cpi_base_15/100)
+# 3. real average benefit 
+df_final$r_avg_ben                <- df_final$avg_ben/(df_final$cpi_base_15/100)
+# 4. real average wage
+df_final$r_avg_w                  <- df_final$avg_w_cp/(df_final$cpi_base_15/100)  
+
+# lag variables
+
+df_final$r_avg_w_lag              <- lag(df_final$r_avg_w,1) 
+df_final$r_avg_ben_lag            <- lag(df_final$r_avg_ben,1)
+return(df_final)  
+}
+```
+
+
+
+## Summarise the Dataset
+
+```{r}
+countries_list                    <-c("DEU","ITA","POL") 
+```
+
+
+
+```{r}
+for (i in 1:length(countries_list)){
+df                                <- generate_dataset_benefits_reg(countries_list[i]) 
+show(summary(df))
+}
+```
+## Visualisation:
+
+### GDP at Current Prices:
+```{r}
+for (i in 1:length(countries_list)){
+  df                                <- generate_dataset_benefits_reg(countries_list[i])
+  plot(df$time,df$r_gdp/10^12, ylab = "Real GDP in Billion (base=2015)", xlab = "YEAR", type = "l" )
+}
+```
+### Unemployed Persons in Million:
+
+```{r}
+for (i in 1:length(countries_list)){
+  df                                <- generate_dataset_benefits_reg(countries_list[i])
+  plot(df$time,df$unemp_pers/10^6, ylab = "Unemployed Persons in Million", xlab = "YEAR", type = "l" )
+}
+```
+### Average Wage at Current Prices:
+
+```{r}
+for (i in 1:length(countries_list)){
+  df                                <- generate_dataset_benefits_reg(countries_list[i])
+  plot(df$time,df$r_avg_w, ylab = "Real Average Wage (base=2015)", xlab = "YEAR", type = "l" )
+}
+```
+
+### Average Unemployment Benefit per Person:
+
+$AV\_UNEMP\_BEN_t = \frac{GDP_t^{cp}*\frac{\%UNEMP\_EXP_t}{100}}{UNEMP\_PERS_t}$
+
+```{r}
+for (i in 1:length(countries_list)){
+  df                                <- generate_dataset_benefits_reg(countries_list[i])
+  plot(df$time,df$r_avg_ben, ylab = "Real Average Unemployment Benefit (base=2015)", xlab = "YEAR", type = "l" )
+}
+```
+
+# Regression Part
+
+
+The previous generated data set is used to test the following expression:
+
+$B_t = \rho^{b^{1/4}}*B_{t-1}+ (1-\rho^{b^{1/4}})*\zeta*W_{t-1}$
+
+```{r}
+
+df = data.frame()
+for (i in 1:length(countries_list)){
+  temp <-  generate_dataset_benefits_reg(countries_list[i])
+  df <- rbind(df, temp)
+}
+
+### Create dummies
+
+df$Germany                        <- recode(df$country, "DEU"=1, "ITA"=0, "POL"=0)
+df$Italy                          <- recode(df$country, "ITA"=1, "DEU"=0, "POL"=0)
+df$Poland                         <- recode(df$country, "DEU"=0, "ITA"=0, "POL"=1)
+
+model                             <- lm( r_avg_ben ~ -1  + I(Poland*r_avg_ben_lag)+ I(Poland*r_avg_w_lag) + I(Germany*r_avg_ben_lag) + I(Germany*r_avg_w_lag) + I(Italy*r_avg_ben_lag) + I(Italy*r_avg_w_lag),data = df)
+summary(model)
+
+adf.test(model$residuals)
+
+plot(model$residuals)
+
+```
